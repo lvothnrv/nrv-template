@@ -40,4 +40,4 @@ Welcome to my Nrv template ! This template is designed to allow you to quickly c
 
 ## Contribution
 
-Contributions are welcome! Feel free to open an issue to report a bug or propose a feature request.
+Contributions are welcome ! Feel free to open an issue to report a bug or propose a feature request.
