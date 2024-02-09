@@ -1,7 +1,8 @@
 import UserModel from '../../models/UserModel';
 import { IUser } from '../../interfaces';
-import { createToken } from '../../utils/jwt';
+import { createToken } from '../../services/jwt';
 import { errorResponse } from '../utils/error';
+import { encryptWithRSA } from '../../services/rsaKey';
 
 const AuthMutation = {
   login: async (_: null, args: any): Promise<IUser> => {
@@ -32,6 +33,7 @@ const AuthMutation = {
 
     return user;
   },
+
   register: async (_: null, args: any): Promise<IUser> => {
     const { firstName, lastName, email, password } = args.user;
 
@@ -59,6 +61,12 @@ const AuthMutation = {
     user.token = token;
 
     return user;
+  },
+
+  encryptTest: async (_: null, args: any) => {
+    const { text } = args;
+    const encrypt = await encryptWithRSA(text);
+    return { encrypt };
   },
 };
 

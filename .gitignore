@@ -130,5 +130,6 @@ dist
 .pnp.*
 
 # Nrv template
+.safe/
 .build/
 package-lock.json

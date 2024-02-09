@@ -1,4 +1,4 @@
-import { verifyToken } from '../../utils/jwt';
+import { verifyToken } from '../../services/jwt';
 
 const context = async ({ req }: any) => {
   const ctxAuth = await verifyToken(req);

@@ -11,6 +11,7 @@ const launchGraphQLServer = async (app: any) => {
     typeDefs,
     resolvers,
     status400ForVariableCoercionErrors: true,
+    introspection: true,
   });
 
   await server.start();
