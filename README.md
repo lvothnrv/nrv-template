@@ -15,6 +15,7 @@ Welcome to my Nrv template ! This template is designed to allow you to quickly c
 - Ready-to-use configurations for a smooth development experience.
 - Authentication system already present in the template, allowing users to create an account, log in, with authentication middleware included.
 - Well-thought-out folder architecture for optimal code organization.
+- RSA Encryption and Decryption System: Implementation of the RSA system to encrypt and decrypt data in place, ensuring a high level of security for sensitive information exchanged via the API.
 - TypeScript support for static type checking and better code documentation.
 
 ## How to Use
