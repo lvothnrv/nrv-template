@@ -20,17 +20,14 @@ graphqlFiles.forEach((file: any) => {
     typeDefsArray.push(typeDef);
   }
 });
-
 const typeDefs = typeDefsArray.join('\n');
 
+const query = [UserQuery];
+const mutation = [UserMutation, AuthMutation];
+
 const resolvers = {
-  Query: {
-    ...UserQuery,
-  },
-  Mutation: {
-    ...UserMutation,
-    ...AuthMutation,
-  },
+  Query: Object.assign({}, ...query),
+  Mutation: Object.assign({}, ...mutation),
 };
 
 export { resolvers, typeDefs };

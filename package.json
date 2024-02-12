@@ -1,6 +1,6 @@
 {
   "name": "nrv-tempalte",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Designed to enable you to quickly build a robust and efficient backend API using powerful technologies.",
   "main": "./.build/index.js",
   "scripts": {
