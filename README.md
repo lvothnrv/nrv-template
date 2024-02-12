@@ -20,24 +20,45 @@ Welcome to my Nrv template ! This template is designed to allow you to quickly c
 
 ## How to Use
 
-1. Install the template globally with the following command:
+1. Install the template globally with the following command :
    ```
    npm install -g create-nrv-template
    ```
 
-2. Next, create a new API project by executing the following command:
+2. Next, create a new API project by executing the following command :
    ```
    npx create-nrv-template my-api
    ```
 
-3. To run the server in development mode, use the command:
+3. To run the server in development mode, use the command :
    ```
    npm run dev
    ```
 
-4. To run the server in production mode, use the command:
+4. To run the server in production mode, use the command :
    ```
    npm start
+   ```
+
+## Use RSA keys
+
+To generate RSA keys :
+   ```
+   npm run generateRSAKey
+   ```
+
+To encrypt data :
+   ```ts
+   import { encryptWithRSA } from '../../services/rsaKey';
+   ...
+   const encryptedText = await encryptWithRSA('Text');
+   ```
+
+To decrypt data :
+   ```ts
+   import { decryptWithRSA } from '../../services/rsaKey';
+   ...
+   const decryptedText = await decryptWithRSA('Text');
    ```
 
 ## Contribution
